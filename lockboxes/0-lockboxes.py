@@ -18,10 +18,10 @@ def canUnlockAll(boxes):
                     keys.append(value)
             else:
                temp = count
-               for value in boxes[temp]:
-                    if temp in keys:
+               for value in boxes[temp + 1]:
+                    if temp + 1 in keys:
                         keys.append(value)
-                    if temp == many:
+                    if temp + 1 == many:
                         return False
                     temp += 1
         count += 1
