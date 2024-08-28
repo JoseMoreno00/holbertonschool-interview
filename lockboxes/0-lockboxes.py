@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
 You have n number of locked boxes in front of you.
-Each box is numbered sequentially from 0 to n - 1 and each box may contain keys to the other boxes.
+Each box is numbered sequentially from 0 to n - 1 and each box may contain
+keys to the other boxes.
 """
+
 
 def canUnlockAll(boxes):
     keys = []
@@ -17,8 +19,8 @@ def canUnlockAll(boxes):
                 for value in box:
                     keys.append(value)
             else:
-               temp = count
-               for value in boxes[temp + 1]:
+                temp = count
+                for value in boxes[temp + 1]:
                     if temp + 1 in keys:
                         keys.append(value)
                     if temp + 1 == many:
